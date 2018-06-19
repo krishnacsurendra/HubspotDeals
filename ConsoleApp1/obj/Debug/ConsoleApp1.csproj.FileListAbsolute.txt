@@ -1,0 +1,16 @@
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Twilio.dll
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\bin\Debug\Twilio.xml
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\krishnas\source\repos\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
