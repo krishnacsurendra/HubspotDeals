@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿
+
+using Newtonsoft.Json;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -12,6 +14,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            int counter = 0;
+            List<string> companies = new List<string>();
             //get all the pipeline stages
             var pipelineUrl = "https://api.hubapi.com/deals/v1/pipelines/default?hapikey=ea033928-93c5-4afd-a99e-05e446230128";
             string json = GetJsonResult(pipelineUrl);
@@ -44,13 +48,17 @@ namespace ConsoleApp1
                     string companyUrl = "https://api.hubapi.com/companies/v2/companies/" + companyId + "?hapikey=ea033928-93c5-4afd-a99e-05e446230128";
                     json = GetJsonResult(companyUrl);
                     dynamic company = JsonConvert.DeserializeObject(json);
-                    var dealScore = company.properties.deal_score != null ? company.properties.deal_score.value.ToString() : 0;
+                    string dealScore = company.properties.deal_score != null ? company.properties.deal_score.value.ToString() : "0";
+                    if (!dealScore.Equals("0"))
+                    {
+                        var request = "https://api.hubapi.com/deals/v1/deal/" + dealId + "?hapikey=ea033928-93c5-4afd-a99e-05e446230128";
 
-                    var request = "https://api.hubapi.com/deals/v1/deal/" + dealId + "?hapikey=ea033928-93c5-4afd-a99e-05e446230128";
+                        var postData = "{\"properties\": [{\"name\": \"deal_score\",\"value\": " + dealScore + "}]}";
 
-                    var postData = "{\"properties\": [{\"name\": \"deal_score\",\"value\": " + dealScore + "}]}";
-
-                    UpdateProductAsync(request, postData).GetAwaiter().GetResult();
+                        UpdateProductAsync(request, postData).GetAwaiter().GetResult();
+                        counter++;
+                        companies.Add(companyId.ToString());
+                    }
                 }
                 temp = recentDealsUrl + "offset=" + deals.offset;
             }
@@ -80,7 +88,7 @@ namespace ConsoleApp1
             string json = readerStream.ReadToEnd();
             readerStream.Close();
             return json;
-        }   
+        }
 
         private static string ReadStreamFromResponse(WebResponse response)
         {
